@@ -1,0 +1,79 @@
+****Análise do Espaço Neutral Fenotípico para a Rede Booleana****
+ 		****do Ciclo Celular da Levedura****
+
+	****Gabriel Pinheiro S. Piedade - nUSP: 8927356 (IB)****
+
+	Os códigos aqui disponíveis foram usados na elaboração do trabalho
+'Análise do Espaço Neutral Fenotípico para a Rede Booleana do Ciclo Celular 
+da Levedura' elaborado para a matéria Pesquisa em Biologia (0410513) Eles 
+estão organizados da seguinte forma:
+
+###   Caso você queira rodar o código no seu computador é necessário  ###
+### determinar o local dos arquivos, pois as funções dependem dessa   ###
+### informação para abrir os dados. Para fazer isso vá no arquivo     ###
+### 'arquivos.py' e coloque o local da pasta principal em 'path='     ###                     
+
+- Funções criadas para realizar os calculos, arquivos e análises:
+
+	-analise.py -> Análises e Imagens (Funções: relacoes_entre_genes,
+					   gera_barplot_gene, gera_analise,
+					   abre_analise, tds_arestas,
+					   cores_nohs)
+
+	-arquivos.py -> Abre e imprime arquivos (Funções: abre_arquivo_yeast, 
+						dados_wildtype, imprime_heap,
+						le_arquivo)
+
+	-transicao_estados.py -> Gera os dados da transição de estados
+	(Funções: codigo_gray, gera_transicoes, lista_adjacencia, 
+	lista_para_binario, altera_transicoes)
+
+	-calculos_estados.py -> Calculos usando redes de transição de estados
+	(Funções: bacias_arvores, bacias, tamanho_bacias, atratores, ciclos,
+	entropia, _cal_T_estados, cal_T, _cal_L_estados, 
+	cal_L, _caminho_atrator, cal_w, W_total, dist_Q)
+	
+	-calculos_redes.py -> Calculos da distância entre as redes e 
+	construção do Random Heap (Funções: distanciaHamming, stringfica_rede,
+	matriz_da_string, sorteia_descendentes, gera_random_heap, 
+	combina_caminhos)
+	
+	-inferências_redes.py -> Solução do CSP das linhas possíveis (Funções:
+	seleciona_inequacao, inequacoes, resolve_CSP, imprime_solucoes)
+
+- As análises e resultados obtidos por essas funções foram rodadas em arquivos
+separados. Os arquivos 'main_' contém cada etapa da realizalçao do trabalho:
+
+	-main_1.py -> Transição de estados da rede Wildtype e calculos de 
+	Entropia (H), Convergência (W), tamanho das bacias, atratores e
+	presença de ciclos na rede
+
+	-main_2.py -> Imprime o grafo das transições de estados da rede 
+	Wildtype
+
+	-main_3.py -> Resolução do CSP para encontrar as linhas das matrizes
+	funcionais
+
+	-main_4.py -> Imprime os barplots de cada gene
+
+	-main_5.py -> Gera e imprime o Random Heap, realiza os calculos das
+	redes encontradas e imprime as todas as arestas (distância de Hamming
+	igual à 1) entre as redes encontradas
+
+	-main_6.py -> Imprime o gráfico da correlação de Convergência e 
+	Entropia das redes encontradas no Random Heap
+
+	-main_7.py -> Imprime o Random Heap usando a distância Q como forma de
+	diferenciar as redes
+
+- Os dados utiliazdos e os resultados gerados foram salvos nas seguintes pastas:
+	
+	-dados -> Matriz Wildtype e os 13 estados encontrados para o ciclo
+
+	-genes_yeast -> Genes gerados pela resolução do CSP
+
+	-Imagens -> Gráficos e imagens geradas
+
+	-resultados -> Random Heap e análises feitas
+
+	
